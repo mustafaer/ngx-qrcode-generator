@@ -3,4 +3,3 @@
  */
 
 export * from './lib/ngx-qrcode-generator.component';
-export * from './lib/qrious';

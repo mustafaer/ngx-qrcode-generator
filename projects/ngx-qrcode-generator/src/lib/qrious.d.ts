@@ -6,7 +6,7 @@ interface QRiousImageElement extends HTMLImageElement {
     qrious: QRious;
 }
 
-declare class QRious {
+export class QRious {
     background: string;
     backgroundAlpha: number;
     foreground: string;
@@ -32,6 +32,3 @@ declare class QRious {
         value: string
     });
 }
-
-
-export default QRious;
