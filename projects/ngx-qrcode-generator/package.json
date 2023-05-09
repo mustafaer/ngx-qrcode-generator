@@ -1,6 +1,6 @@
 {
   "name": "ngx-qrcode-generator",
-  "version": "15.0.1",
+  "version": "15.0.2",
   "description": "Angular qr-code generator",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
