@@ -6,7 +6,7 @@ This is an Angular component that generates QR codes using the QRious library.
 
 To use this component, follow these steps:
 
-1. Install the QRious library by running the following command:
+1. Install the NgxQrcodeGeneratorComponent library by running the following command:
 
    ```shell
    npm i ngx-qrcode-generator
