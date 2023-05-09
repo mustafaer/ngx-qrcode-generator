@@ -1,27 +1,79 @@
-# NgxQrcodeGenerator
+# NgxQrcodeGeneratorComponent
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
+This is an Angular component that generates QR codes using the QRious library.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To use this component, follow these steps:
 
-## Code scaffolding
+1. Install the QRious library by running the following command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   ```shell
+   npm i ngx-qrcode-generator
+   ```
 
-## Build
+2. Import the `NgxQrcodeGeneratorComponent` into your Angular module:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```typescript
+   import { NgxQrcodeGeneratorComponent } from 'ngx-qrcode-generator';
 
-## Running unit tests
+   @NgModule({
+     declarations: [NgxQrcodeGeneratorComponent],
+     // ...
+   })
+   export class YourModule { }
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Use the component in your Angular template:
 
-## Running end-to-end tests
+   ```html
+   <ngx-qrcode-generator
+     [background]="'white'"
+     [backgroundAlpha]="1.0"
+     [foreground]="'black'"
+     [foregroundAlpha]="1.0"
+     [level]="'L'"
+     [mime]="'image/png'"
+     [padding]="null"
+     [size]="100"
+     [value]="'your-QR-code-value'"
+     [canvas]="false"
+   ></ngx-qrcode-generator>
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage
 
-## Further help
+The `NgxQrcodeGeneratorComponent` has the following input properties:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `background` (string, default: `'white'`): The background color of the QR code.
+- `backgroundAlpha` (number, default: `1.0`): The opacity of the background color (0.0 to 1.0).
+- `foreground` (string, default: `'black'`): The foreground color of the QR code.
+- `foregroundAlpha` (number, default: `1.0`): The opacity of the foreground color (0.0 to 1.0).
+- `level` (string, default: `'L'`): The error correction level of the QR code (`'L'`, `'M'`, `'Q'`, `'H'`).
+- `mime` (string, default: `'image/png'`): The MIME type of the generated QR code image.
+- `padding` (number or null, default: `null`): The padding around the QR code image (in pixels). Use `null` for default padding.
+- `size` (number, default: `100`): The size of the QR code image (width and height).
+- `value` (string): The value to encode as a QR code.
+- `canvas` (boolean, default: `false`): Whether to render the QR code as a canvas element (`true`) or an image element (`false`).
+
+## Example
+
+Here is an example of using the `NgxQrcodeGeneratorComponent`:
+
+```html
+<ngx-qrcode-generator
+  [value]="'https://example.com'"
+  [size]="200"
+  [foreground]="'#ff0000'"
+  [background]="'#ffffff'"
+></ngx-qrcode-generator>
+```
+
+In this example, a QR code is generated with the value `'https://example.com'`, size of `200` pixels, red foreground color (`'#ff0000'`), and white background color (`'#ffffff'`).
+
+## Notes
+
+- This component requires the QRious library to be installed.
+- Make sure to import and declare the component in your Angular module.
+- Customize the input properties to achieve the desired QR code appearance.
+- The generated QR code can be rendered as either a canvas or an image element, depending on the `canvas` input property.

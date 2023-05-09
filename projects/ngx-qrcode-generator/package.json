@@ -1,6 +1,7 @@
 {
   "name": "ngx-qrcode-generator",
-  "version": "15.0.0",
+  "version": "15.0.1",
+  "description": "Angular qr-code generator",
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0",
@@ -9,5 +10,31 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mustafaer/ngx-qrcode-generator.git"
+  },
+  "url": "https://github.com/mustafaer/ngx-qrcode-generator/issues",
+  "email": "mustafaerpro@gmail.com",
+  "author": "Mustafa Er",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular15",
+    "public",
+    "qr",
+    "code",
+    "generator"
+  ],
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/mustafaer"
+    },
+    {
+      "type": "buymeacoffee",
+      "url": "https://www.buymeacoffee.com/mustafaer"
+    }
+  ]
 }
